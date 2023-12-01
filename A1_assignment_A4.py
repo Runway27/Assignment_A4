@@ -17,9 +17,8 @@ for t in range(49):
 
 # Plot the state trajectory
 plt.figure()
-plt.plot(x[:, 0], label='x_1')
-plt.plot(x[:, 1], label='x_2')
-plt.xlabel('Time')
-plt.ylabel('State')
+plt.plot(x[:, 0], x[:, 1])
+plt.xlabel('x1')
+plt.ylabel('x2')
 plt.legend()
 plt.show()
