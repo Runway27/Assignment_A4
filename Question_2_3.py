@@ -9,7 +9,6 @@ p = solve_discrete_lyapunov(a.T, q)
 print(p)
 ###############################################################################
 #Plotting of the ellipsoidal set
-energy=np.dot(a.T, p, a)
 # Generate theta values
 theta = np.linspace(0, 2*np.pi, 100)
 #theta generates 100 equally spaced values between 0 to 2pi
@@ -19,7 +18,7 @@ y = np.sin(theta)
 points = np.vstack((x, y))
 
 # Transform energy to get points on the ellipsoid
-ellipsoid_points = np.dot(energy, points)
+ellipsoid_points = np.dot(P, points)
 
 # Plot the ellipsoid
 plt.figure()
